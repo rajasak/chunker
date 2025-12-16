@@ -1,0 +1,19 @@
+[project]
+name = "pdf-chunker"
+version = "0.1.0"
+description = "PDF to hierarchical and flat chunk converter using Docling"
+requires-python = ">=3.9"
+dependencies = [
+  "docling",
+  "Pillow",
+  "numpy",
+  "pdfminer.six",
+  "rapidocr-onnxruntime"
+]
+
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[tool.setuptools]
+packages = ["pdf_chunker"]
