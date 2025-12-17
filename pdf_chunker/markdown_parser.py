@@ -2,7 +2,7 @@ import re
 from typing import List, Tuple
 
 # Matches: 1, 1.1, 2.3.4 etc
-SECTION_RE = re.compile(r'^\d+(?:\.\d+)*\s+')
+SECTION_RE = re.compile(r'^\d+(?:\.\d+)*\.?\s+')
 
 
 def extract_sections_from_markdown(markdown: str) -> List[Tuple[str, str]]:
