@@ -86,21 +86,7 @@ def markdown_to_sections(markdown: str) -> List[Tuple[str, str]]:
     raw_sections = extract_sections_from_markdown(markdown)
     return merge_child_sections(raw_sections)
 
-def markdown_to_sections(markdown: str) -> List[Tuple[str, str]]:
-    """
-    High-level API:
-    Markdown → extracted sections → merged sections
-    """
-    raw_sections = extract_sections_from_markdown(markdown)
-    return merge_child_sections(raw_sections)
 
-def markdown_to_sections(markdown: str) -> List[Tuple[str, str]]:
-    """
-    High-level API:
-    Markdown → extracted sections → merged sections
-    """
-    raw_sections = extract_sections_from_markdown(markdown)
-    return merge_child_sections(raw_sections)
 
 
 
