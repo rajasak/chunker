@@ -1,4 +1,3 @@
-
 #!/bin/bash
 
 set -e
@@ -8,25 +7,25 @@ echo "======================================"
 echo "   CHUNKER AUTO INSTALL STARTED"
 echo "======================================"
 
+REPO_ROOT="$(cd "$(dirname "$0")" && pwd)"
+
+echo "Repository: $REPO_ROOT"
+echo ""
+
 echo "Creating Python virtual environment..."
 
-python3 -m venv .venv
-
-echo "Activating virtual environment..."
-
-source .venv/bin/activate
+python -m venv "$REPO_ROOT/.venv"
 
 echo "Installing pandas and numpy..."
 
-python -m pip install --upgrade pip
-python -m pip install pandas numpy
+"$REPO_ROOT/.venv/Scripts/python.exe" -m pip install --upgrade pip
+"$REPO_ROOT/.venv/Scripts/python.exe" -m pip install pandas numpy
 
 echo ""
 echo "======================================"
 echo "   INSTALLATION COMPLETE"
 echo "======================================"
+
 echo ""
-echo "Virtual environment: .venv"
-echo "Activate it with:"
-echo "source .venv/bin/activate"
-echo ""
+echo "Virtual environment created at:"
+echo "$REPO_ROOT/.venv"
